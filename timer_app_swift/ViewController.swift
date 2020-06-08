@@ -29,7 +29,17 @@ class ViewController: UIViewController {
         
         count = 0
         
-        stopButton.isEnabled = true
+        stopButton.isEnabled = false
+        
+        for i in 0..<5{
+            print(i)
+            
+            let image = UIImage(named: "\(i)")
+            imageArray.append(image!)
+        }
+        
+//        imageView.image = UIImage[named: "0"]
+        imageView.image = UIImage(named: "0")
     }
 
     
@@ -40,28 +50,38 @@ class ViewController: UIViewController {
             target: self,
             selector: #selector(timerUpdate),
             userInfo: nil, repeats: true)
+        
     }
     
     
     @objc func timerUpdate(){
         
         count = count + 1
-        imageView.image = imageArray[0]
+        
+        if  count > 3 {
+            count = 0
+        }
+        
+        imageView.image = imageArray[count]
         
     }
     
     @IBAction func start(_ sender: Any) {
         
-        startButton.isEnabled = true
+        startTimer()
         
+        startButton.isEnabled = false
+        stopButton.isEnabled = true
     }
     
     @IBAction func stop(_ sender: Any) {
         
+        startButton.isEnabled = true
         stopButton.isEnabled = false
-
-    }
     
+        timer.invalidate()
+        
+    }
     
 }
 
