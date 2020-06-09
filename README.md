@@ -4,6 +4,11 @@
 * 画面右下のスタートボタンを押すと、画面上部の画像(５枚)が0.2秒づつの間隔で入れ替わっていくアプリです。
 * 画面左下のストップボタンで、画像の入れ替わりがとまります。
 
+# 開発環境
+
+* Swift 5.2.4
+* Xcode 11.5
+
 <img width="337" alt="スクリーンショット 2020-06-08 15 54 22" src="https://user-images.githubusercontent.com/49052894/84000793-52f6f800-a9a0-11ea-9881-0d397f7b8f51.png">
 
 <img width="327" alt="スクリーンショット 2020-06-08 15 55 03" src="https://user-images.githubusercontent.com/49052894/84000840-6bffa900-a9a0-11ea-82b6-0aa0af6f4c3d.png">
